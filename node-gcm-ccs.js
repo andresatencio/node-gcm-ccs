@@ -137,6 +137,11 @@ module.exports = function GCMClient(projectId, apiKey) {
 
 	 return Object.keys(acks).length <=100;
 	}
+	function conectar () {
+		client.connect();
+	}
+	
+	events.conectar = conectar;
 	events.end = end;
 	events.send = send;
 	events.isReady= isReady;
