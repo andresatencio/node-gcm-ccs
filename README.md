@@ -2,7 +2,7 @@ Getting Started
 ===============
 Install via
 ```
-npm install git+https://github.com/jacobp100/node-gcm-ccs.git
+npm install git+https://github.com/andresatencio/node-gcm-ccs.git
 ```
 
 Use via
