@@ -25,6 +25,7 @@ module.exports = function GCMClient(projectId, apiKey) {
 	function _send(json) {
 		if (draining) {
 			queued.push(json);
+			client.connect();
 		} else {
 			var message = new xmpp.Stanza.Element('message').c('gcm', { xmlns: 'google:mobile:data' }).t(JSON.stringify(json));
 			client.send(message);
