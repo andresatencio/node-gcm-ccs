@@ -50,6 +50,7 @@ module.exports = function GCMClient(projectId, apiKey) {
 			client.connect();
 		} else {
 			events.emit('disconnected');
+			client.connect();
 		}
 	});
 
